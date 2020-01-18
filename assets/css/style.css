@@ -11,8 +11,8 @@ body {
     background-color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {  
-    font-family: 'Montserrat', sans-serif;
+nav, h1, h2, h3, h4, h5, h6 {  
+    font-family: 'Poppins', sans-serif;
 }
 
 #hero-image {
@@ -69,6 +69,13 @@ nav.navbar {
     -webkit-transition: all .5s ease;
 }
 
+nav.navbar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+
 nav.navbar .navbar-toggler {
     border: none;
 }
@@ -77,12 +84,24 @@ nav.navbar .navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+nav.navbar .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+a.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+}
+
+
 nav.fixed-top {
     position: fixed;
     padding-top: 10px;
     padding-bottom: 13px;
     background-color: #fff;
-    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.3);
   }
   
   nav.fixed-top .navbar-brand {
@@ -96,13 +115,24 @@ nav.fixed-top {
   nav.fixed-top .navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
-  
-  nav.fixed-top .nav-item {
-    color: #000;
+
+  nav.fixed-top .logo {
+    color: black;
   }
   
   nav.fixed-top .nav-item .nav-link {
-    color: #000 !important;
+    color: #999 !important;
   }
+
+  nav.fixed-top a.nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #000;
+  }
+  
+  nav.fixed-top .nav-link.active {
+    color: #000 !important; 
+  }
+
+
 
 /* ---- END NAVBAR ---- */
