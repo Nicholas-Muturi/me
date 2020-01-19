@@ -291,19 +291,19 @@ margin-bottom: 10px;
 #projectList {
   list-style-type: none;
   text-align: center;
+  padding-right: 2rem;
 }
 
 #projectList li{
   display: inline-block;
-  margin-top: 2rem;
+  margin: 1rem;
 }
 
 .card {
   width: 28rem;
   border-radius: 2px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: auto;
 }
 
 .card-title {
@@ -368,9 +368,22 @@ a.card-title {
 
 }
 
+@media only screen and (max-width: 320px){
+
+}
+
+
 
 /* ---- PROJECT ---- */
 #contact {
+  display: grid;
   background-color: #444;
-  height: 100vh;
+  padding-top: 10rem;
+  padding-bottom: 100px;
+  min-height: 100vh;
 }
+
+#contact .superTitle {
+  color: white;
+}
+
