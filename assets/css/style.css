@@ -218,6 +218,7 @@ margin-bottom: 10px;
 #skills-list {
   list-style-type: none;
   text-align: center;
+  padding: 0px;
 }
 
 #skills-list li {
@@ -340,11 +341,15 @@ a.card-title {
   }
 
   #octocat {
-    padding: 2rem 5rem 2rem 5rem;
+    padding: 1.5rem 5.5rem 1.5rem 5.5rem;
   }
 
   #lifeline {
-    padding: 2rem 5rem 2rem 5rem;
+    padding: 1.5rem 5.5rem 1.5rem 5.5rem;
+  }
+
+  .card-img-top {
+    height: 140.828px;
   }
   
 }
@@ -359,11 +364,15 @@ a.card-title {
   }
 
   #octocat {
-    padding: 3rem 4rem 3rem 4rem;
+    padding: 1rem 4rem 1rem 4rem;
   }
 
   #lifeline {
-    padding: 3rem 4rem 3rem 4rem;
+    padding: 1rem 4rem 1rem 4rem;
+  }
+
+  .card-img-top {
+    height: 100.828px;
   }
 
 }
