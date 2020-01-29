@@ -111,8 +111,9 @@ nav.fixed-top .nav-link.active {
 
 /* ---- HERO ---- */
 #hero-image {
-  display: grid;
+  display: flex;
   align-items: center;
+  justify-content: center;
   background-image: url("../img/hero1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -203,11 +204,10 @@ margin-bottom: 10px;
 
 /* ---- ABOUT ---- */
 #about {
-  display: grid;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   margin: 0px;
   padding-top: 70px;
   padding-bottom: 70px;
@@ -296,6 +296,11 @@ margin-bottom: 10px;
     width: 100px;
     height: 70px;
   }
+
+  .language-logo-css {
+    width: 100px;
+    height: 95px;
+  }
   
 }
 
@@ -304,8 +309,12 @@ margin-bottom: 10px;
 /* ---- PROJECTS ---- */
 #projects {
   background-color: #f4f4f4;
-  padding-top: 10rem;
-  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
   min-height: 100vh;
 }
 
@@ -314,108 +323,137 @@ margin-bottom: 10px;
   font-weight: 800;
 }
 
-#projectList {
-  list-style-type: none;
-  text-align: center;
-  padding-right: 2rem;
-}
-
-#projectList li{
-  display: inline-block;
-  margin: 1rem;
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 .card {
-  display: block;
-  width: 28rem;
+  width: 30rem;
+  height: 20rem;
+  margin-top: 10px;
   border-radius: 2px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin-left: auto;
-  margin-right: auto;
+  transition: opacity 0.5s;
 }
 
-.card-title {
+.mix {
+  position: relative;
+}
+
+section:nth-of-type(2) .text, section:nth-of-type(2) .button {
+  transition: all 0.3s ease-in-out;
   text-align: center;
+  opacity: 0;
+  z-index: 2;
 }
 
-hr {
-  margin:0px;
+section:nth-of-type(2) a.button{
+  text-decoration: none;
+  color: black;
 }
 
-.card-img-top {
-  height: 185.828px;
+.text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
-a.card-title {
+.button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid #23bbd6;
+  font-size: 13pt;
+  margin: 0 auto;
+  padding: 7px 0;
+  width: 170px;
+}
+
+.text p {
   color: #23bbd6;
 }
 
-#octocat {
-  padding: 2rem 10rem 2rem 10rem;
+section:nth-of-type(2) .mix:hover .card {
+  opacity: 0;
 }
 
-#lifeline {
-  padding: 2rem 10rem 2rem 10rem;
+section:nth-of-type(2) .mix:hover .text {
+  top: 24%;
+  opacity: 1;
 }
+
+section:nth-of-type(2) .mix:hover .button {
+  opacity: 1;
+  bottom: 30%;
+}
+
+section:nth-of-type(2) .button:hover {
+  color: white;
+  background-color: #23bbd6;
+}
+
 
 @media only screen and (max-width: 425px){
   .card {
-    width: 18rem;
+    width: 22rem;
+    height: 12rem;
   }
 
-  a.card-title {
-    font-size: 23px;
+  .button {
+    padding: 5px 0;
   }
 
-  #octocat {
-    padding: 1.5rem 5.5rem 1.5rem 5.5rem;
-  }
-
-  #lifeline {
-    padding: 1.5rem 5.5rem 1.5rem 5.5rem;
-  }
-
-  .card-img-top {
-    height: 140.828px;
+  section:nth-of-type(2) .mix:hover .text {
+    top: 20%;
   }
   
+  section:nth-of-type(2) .mix:hover .button {
+    bottom: 25%;
+  }
 }
 
 @media only screen and (max-width: 375px){
   .card {
-    width: 14rem;
+    width: 18rem;
+    height: 12rem;
   }
-
-  a.card-title {
-    font-size: 20px;
-  }
-
-  #octocat {
-    padding: 1rem 4rem 1rem 4rem;
-  }
-
-  #lifeline {
-    padding: 1rem 4rem 1rem 4rem;
-  }
-
-  .card-img-top {
-    height: 100.828px;
-  }
-
-}
-
-@media only screen and (max-width: 320px){
-
 }
 
 
+#wildlife_tracker {
+  background: url('../img/projects/wildlife/wildlife_tracker.png') center center/cover;
+}
 
-/* ---- PROJECT ---- */
+#gitsearch {
+  background: url('../img/projects/gitsearch/gitsearch.png') center center/cover;
+}
+
+#pigdice {
+  background: url('../img/projects/pigdice/pigdice.png') center center/cover;
+}
+
+#lifeline {
+  background-color: #fff;
+  background: url('../img/projects/lifeline/health.png') center center no-repeat;
+}
+
+
+/* ---- END PROJECT ---- */
+
+
+
+
+
 #contact {
   background-color: #444;
   padding-top: 10rem;
   padding-bottom: 100px;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 #contact .superTitle {
