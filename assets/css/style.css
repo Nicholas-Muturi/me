@@ -11,6 +11,11 @@ body {
     background-color: white;
 }
 
+.superTitle {
+  font-size: 45px;
+  font-weight: 800;
+}
+
 nav, h1, h2, h3, h4, h5, h6 {  
     font-family: 'Poppins', sans-serif;
 }
@@ -29,6 +34,10 @@ h3 {
 
 p {
   font-size: 19px;
+}
+
+.hidden {
+  display: none;
 }
 
 /* ------ NAVBAR ------ */
@@ -318,11 +327,6 @@ margin-bottom: 10px;
   min-height: 100vh;
 }
 
-.superTitle {
-  font-size: 45px;
-  font-weight: 800;
-}
-
 .card-deck {
   display: flex;
   flex-wrap: wrap;
@@ -443,20 +447,112 @@ section:nth-of-type(2) .button:hover {
 }
 
 
-/* ---- END PROJECT ---- */
-
-
-
-
+/* ---- CONTACT ---- */
 
 #contact {
   background-color: #444;
   padding-top: 10rem;
   padding-bottom: 100px;
-  min-height: 50vh;
-}
-
-#contact .superTitle {
+  min-height: 100vh;
   color: white;
+  position: relative;
 }
 
+form {
+  margin: auto 25rem auto 25rem;
+}
+
+@media only screen and (max-width: 1440px){
+  form {
+    margin: auto 15rem auto 15rem;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  form {
+    margin: auto 10rem auto 10rem;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  form {
+    margin: auto 6rem auto 6rem;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  form {
+    margin: auto 3rem auto 3rem;
+  }
+}
+
+@media only screen and (max-width: 320px){  
+  form {
+    margin: auto 2rem auto 2rem;
+  }
+}
+
+#submit {
+  display: block;
+  margin: auto;
+}
+
+#footer {
+  background-color: rgba(10, 10, 10, 1);
+  margin: 0px;
+  padding: 15px 20rem 15px 20rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+#footer p {
+  font-size: 14px;
+  margin: 0px;
+}
+.spacer {
+  flex: 1;
+}
+
+@media only screen and (max-width: 1440px){
+  #footer {
+    padding: 15px 15rem 15px 15rem;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  #footer {
+    padding: 15px 10rem 15px 10rem;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  #footer {
+    padding: 15px 6rem 15px 6rem;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  #footer {
+    padding: 15px 2rem 15px 2rem;
+  }
+}
+
+@media only screen and (max-width: 320px){  
+  #footer {
+    padding: 20px 1rem 20px 1rem;
+  }
+}
+
+.fab-icon {
+  margin: 0px 10px 0px 0px;
+  font-size: 25px;
+  color: #f4f4f4;
+}
+
+.fab-icon:hover {
+  color: #23bbd6;
+}
+
+/* ---- END PROJECT ---- */

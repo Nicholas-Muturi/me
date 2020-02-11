@@ -8,6 +8,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Poppins:500,600|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome_5.1.2/css/all.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Nick Muturi</title>
 </head>
@@ -162,9 +163,32 @@
       </div>
     </section>
 
-    <!-- <section id="contact" data-scroll-index="3">
-      <h1 class="superTitle text-center">Contact</h1>
-    </section> -->
+    <section id="contact" data-scroll-index="3">
+      <h1 class="superTitle text-center">Get In Touch</h1>
+      <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+        <div class="form-group">
+          <label for="">Name</label>
+          <input class="form-control" type="text" name="name" id="name">
+        </div>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input class="form-control" type="email" name="email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="">Message</label>
+          <textarea class="form-control" name="message" id="message" rows="5"></textarea>
+        </div>
+        <div data-netlify-recaptcha="true"></div>
+        <button id="submit" type="submit" class="btn btn-primary px-3 py-2">Submit</button>
+      </form>
+
+      <div id="footer">
+        <p>Nicholas <span style="color: #23bbd6;">Muturi</span> &copy 2020 </p>
+        <span class="spacer"></span>
+        <a class="fab-icon" href="https://www.linkedin.com/in/nicholas-muturi-36ba54151/"><i class="fab fa-linkedin"></i></a>
+        <a class="fab-icon" href="http://github.com/nicholas-muturi"><i class="fab fa-github"></i></a>
+      </div>
+    </section>
 
   </div><!--end container -->
 </body>
